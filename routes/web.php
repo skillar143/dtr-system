@@ -19,4 +19,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
+Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard.index');
+
+
+Route::get('/employee', [App\Http\Controllers\EmployeeController::class, 'index'])->name('employee.index');
+Route::post('/employee', [App\Http\Controllers\EmployeeController::class, 'create'])->name('employee.create');
+
+

@@ -1,10 +1,16 @@
 <nav class="sb-topnav navbar navbar-expand navbar-light" style="background-color: #E1C16E">
         <!-- Navbar Brand-->
-        <a class="navbar-brand ps-3" href="index.html">PUP Calauan HR</a>
+       
+  
+    <a class="navbar-brand" href="{{route('dashboard.index')}}">
+    <img class="navbar-icon img-profile rounded-circle ps-3" style="height:50px" src="{{asset('img/logo.png')}}">
+    </a>
+  
+        <!-- <h1 class="navbar-brand ps-3" href="index.html">PUP Calauan HR</h1> -->
         <!-- Sidebar Toggle-->
         <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
         <!-- Navbar Search-->
-        
+        <h1 class="navbar-brand ms-auto me-0 me-md-3 my-2 my-md-0" href="index.html">PUP Calauan HR</h1>
         <!-- Navbar-->
         <ul class="navbar-nav ms-auto me-0 me-md-3 my-2 my-md-0">
             <li class="nav-item dropdown">

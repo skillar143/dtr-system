@@ -15,6 +15,7 @@ class EmployeeController extends Controller
     public function index()
     {
         //
+        return view('admin/employee.index');
     }
 
     /**
@@ -22,9 +23,10 @@ class EmployeeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
         //
+        dd($request);
     }
 
     /**

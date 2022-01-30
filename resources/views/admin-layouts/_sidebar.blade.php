@@ -2,12 +2,40 @@
     <div class="sb-sidenav-menu">
         <div class="nav">
             <div class="sb-sidenav-menu-heading">Core</div>
-            <a class="nav-link" href="{{route('dashboard')}}">
+            <a class="nav-link" href="{{route('dashboard.index')}}">
                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                 Dashboard
             </a>
-            <div class="sb-sidenav-menu-heading">Interface</div>
-            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+            <div class="sb-sidenav-menu-heading">Menu</div>
+            <a class="nav-link" href="{{route('employee.index')}}">
+                <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
+               Employee
+            </a>
+            <a class="nav-link" href="charts.html">
+                <div class="sb-nav-link-icon"><i class="fas fa-list-ul"></i></div>
+               Attendance
+            </a>
+            <a class="nav-link" href="charts.html">
+                <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
+               Leave
+            </a>
+            <div class="sb-sidenav-menu-heading">Addons</div>
+            <a class="nav-link" href="charts.html">
+                <div class="sb-nav-link-icon"><i class="fas fa-clipboard-list"></i></div>
+                Reports
+            </a>
+        </div>
+    </div>
+    <div class="sb-sidenav-footer" style="background-color: maroon">
+        <div class="small">Logged in as:</div>
+       Admin
+    </div>
+</nav>
+
+
+<!-- dropdown -->
+
+            <!-- <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                 <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
                Employee
                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
@@ -17,8 +45,12 @@
                     <a class="nav-link" href="layout-static.html">Static Navigation</a>
                     <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a>
                 </nav>
-            </div>
-            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+            </div> -->
+
+
+            <!-- nested dropdown -->
+
+            <!-- <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                 Pages
                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
@@ -48,20 +80,4 @@
                         </nav>
                     </div>
                 </nav>
-            </div>
-            <div class="sb-sidenav-menu-heading">Addons</div>
-            <a class="nav-link" href="charts.html">
-                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                Charts
-            </a>
-            <a class="nav-link" href="tables.html">
-                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                Tables
-            </a>
-        </div>
-    </div>
-    <div class="sb-sidenav-footer" style="background-color: maroon">
-        <div class="small">Logged in as:</div>
-       Admin
-    </div>
-</nav>
+            </div> -->
