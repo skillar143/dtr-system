@@ -3,7 +3,7 @@
 @section('content')
 
 <h1 class="mt-3">Employee List</h1>
-<a href="" class="btn btn-sm btn-outline-danger float-end" data-bs-toggle="modal" data-bs-target="#addModal">Add Employee</a>
+<a href="" class="btn btn-sm btn-outline-danger float-end mx-3" data-bs-toggle="modal" data-bs-target="#addModal">Add Employee</a>
 <div class="table-responsive mt-5 mx-3">
 <table class="table table-striped" id="datatablesSimple">
   <thead>

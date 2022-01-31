@@ -23,6 +23,6 @@ Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])-
 
 
 Route::get('/employee', [App\Http\Controllers\EmployeeController::class, 'index'])->name('employee.index');
-Route::post('/employee', [App\Http\Controllers\EmployeeController::class, 'create'])->name('employee.create');
+Route::post('/employee', [App\Http\Controllers\EmployeeController::class, 'store'])->name('employee.store');
 
 

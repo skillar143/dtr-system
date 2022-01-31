@@ -23,10 +23,9 @@ class EmployeeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Request $request)
+    public function create()
     {
         //
-        dd($request);
     }
 
     /**
@@ -38,6 +37,7 @@ class EmployeeController extends Controller
     public function store(Request $request)
     {
         //
+        dd($request->all());
     }
 
     /**

@@ -8,7 +8,7 @@
       </div>
       <div class="modal-body">
        
-      <form class="needs-validation" action="{{ route('employee.create') }}" method="post" novalidate>
+      <form class="needs-validation" action="{{ route('employee.store') }}" method="post" novalidate>
 @csrf
         <div class="row g-3">
             <div class="col-md-4 mb-3">
