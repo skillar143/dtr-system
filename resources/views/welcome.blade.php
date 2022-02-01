@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>{{ config('app.name', 'Laravel') }}</title>
-
+        <link rel="icon" href="{{asset('img/logo.png')}}" >
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
@@ -68,7 +68,7 @@
         <div class="relative d-flex items-top justify-content-center min-h-screen bg-gray-100 dark:bg-gray-900">
             
             <div class="w-100 position-fixed mt-auto mr-0 px-4 py-2" style="background-color: maroon;">
-                <a href="{{ route('login') }}" class="btn text-sm text-light float-right"><i class="fas fa-user mr-1 "></i>Log in</a>
+                <a href="{{ route('login') }}" class="text-sm text-light float-right"><i class="fas fa-user fa-fw mr-1 "></i>Log in</a>
             </div>
             <div class="d-flex justify-content-center align-items-center">
                 <div class="text-center">
