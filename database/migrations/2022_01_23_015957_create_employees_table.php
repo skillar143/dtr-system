@@ -22,7 +22,6 @@ class CreateEmployeesTable extends Migration
             $table->string('age');
             $table->string('address');
             $table->string('designation');
-            $table->string('password');
             $table->timestamps();
         });
     }
