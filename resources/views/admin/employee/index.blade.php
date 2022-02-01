@@ -8,6 +8,7 @@
 <table class="table table-striped" id="datatablesSimple">
   <thead>
     <tr>
+      <th scope="col">Employee I.D</th>
       <th scope="col">Name</th>
       <th scope="col">Address</th>
       <th scope="col">Designation</th>
@@ -19,6 +20,7 @@
   <tbody>
    @foreach ($employees as $employee)
    <tr>
+     <td>{{$employee->employee_id}}</td>
      <td>{{$employee->getFullname()}}</td>
      <td>{{$employee->address}}</td>
      <td>{{$employee->designation}}</td>
@@ -26,7 +28,7 @@
      <td>{{$employee->age}}</td>
      <td class="col-1">
           <a href="http://" class="btn-sm btn-outline-dark mx-1 edit-employee"
-              data-bs-toggle="modal" data-bs-target="#editModal"
+              data-bs-toggle="modal" data-bs-target="#editModal" data-employeeid="{{ $employee->employee_id }}" 
               data-id="{{ $employee->id }}"  data-firstname="{{ $employee->firstname }}"  
               data-middlename="{{ $employee->middlename }}"  data-lastname="{{ $employee->lastname }}"  
               data-address="{{$employee->address}}"  data-designation="{{ $employee->designation }}"  

@@ -43,6 +43,7 @@ class EmployeeController extends Controller
         $age = \Carbon\Carbon::parse($request->dob)->diff(\Carbon\Carbon::now());
 
         Employee::create([
+            'employee_id' =>$request->employeeid,
             'firstname' =>$request->firstname,
             'lastname' =>$request->lastname,
             'middlename' =>$request->middlename,
@@ -89,6 +90,7 @@ class EmployeeController extends Controller
         //
         $age = \Carbon\Carbon::parse($request->dob)->diff(\Carbon\Carbon::now());
        Employee::where('id','=',$id)->update([
+        'employee_id' =>$request->employeeid,
         'firstname' =>$request->firstname,
         'lastname' =>$request->lastname,
         'middlename' =>$request->middlename,

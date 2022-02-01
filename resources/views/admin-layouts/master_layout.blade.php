@@ -58,6 +58,7 @@
              $(this).click(function(event){
                $('#employeeUpdate').attr("action", "/employee/update/"+$(this).data('id')+"");
                $('#id').val($(this).data('id'));
+               $('#employeeid').val($(this).data('employeeid'));
                $('#firstname').val($(this).data('firstname'));
                $('#middlename').val($(this).data('middlename'));
                $('#lastname').val($(this).data('lastname'));

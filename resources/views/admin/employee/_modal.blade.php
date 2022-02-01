@@ -11,6 +11,13 @@
        
       <form class="needs-validation" action="{{ route('employee.store') }}" method="post" novalidate>
 @csrf
+<div class="row g-3">
+            <div class="col-md-4 mb-3">
+              <label for="validationCustom0">Employee I.D</label>
+              <input type="text" class="form-control" id="validationCustom0" name="employeeid" required >
+            </div>
+          
+        </div>
         <div class="row g-3">
             <div class="col-md-4 mb-3">
               <label for="validationCustom01">First name</label>
@@ -76,6 +83,12 @@
       <form id="employeeUpdate" method="post">
       @method('PUT')
       @csrf
+      <div class="row g-3">
+            <div class="col-md-4 mb-3">
+              <label for="employeeid">Employee I.D</label>
+              <input type="text" class="form-control" id="employeeid" name="employeeid" >
+            </div>
+        </div>
         <div class="row g-3">
             <div class="col-md-4 mb-3">
               <input type="hidden" name="id" id="id">
