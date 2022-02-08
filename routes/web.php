@@ -28,3 +28,10 @@ Route::put('/update/{id}', [App\Http\Controllers\EmployeeController::class, 'upd
 Route::delete('/delete/{id}', [App\Http\Controllers\EmployeeController::class, 'destroy'])->name('employee.destroy');
 });
 
+
+Route::prefix('/designation')->group(function(){
+    Route::get('/', [App\Http\Controllers\DesignationController::class, 'index'])->name('designation.index');
+    Route::post('/add', [App\Http\Controllers\DesignationController::class, 'store'])->name('designation.store');
+    Route::put('/update/{id}', [App\Http\Controllers\DesignationController::class, 'update'])->name('designation.update');
+    Route::delete('/delete/{id}', [App\Http\Controllers\DesignationController::class, 'destroy'])->name('designation.destroy');
+    });

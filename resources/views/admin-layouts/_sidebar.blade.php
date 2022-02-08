@@ -7,18 +7,21 @@
                 Dashboard
             </a>
             <div class="sb-sidenav-menu-heading">Menu</div>
-            <a class="nav-link" href="{{route('employee.index')}}">
-                <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
-               Employee
-            </a>
+
             <a class="nav-link" href="charts.html">
                 <div class="sb-nav-link-icon"><i class="fas fa-list-ul"></i></div>
                Attendance
             </a>
-            <a class="nav-link" href="charts.html">
-                <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
-               Leave
+            <a class="nav-link" href="{{route('designation.index')}}">
+                <div class="sb-nav-link-icon"><i class="fas fa-address-card"></i></div>
+               Designation
             </a>
+            <a class="nav-link" href="{{route('employee.index')}}">
+                <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
+               Employee
+            </a>
+            
+           
             <div class="sb-sidenav-menu-heading">Addons</div>
             <a class="nav-link" href="charts.html">
                 <div class="sb-nav-link-icon"><i class="fas fa-clipboard-list"></i></div>

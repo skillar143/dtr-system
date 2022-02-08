@@ -23,7 +23,7 @@
      <td>{{$employee->employee_id}}</td>
      <td>{{$employee->getFullname()}}</td>
      <td>{{$employee->address}}</td>
-     <td>{{$employee->designation}}</td>
+     <td>{{$employee->getDesignation()}}</td>
      <td>{{$employee->dob}}</td>
      <td>{{$employee->age}}</td>
      <td class="col-1">

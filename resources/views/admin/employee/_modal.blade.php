@@ -1,3 +1,23 @@
+<?php
+ 
+ $permitted_chars = '0123456789';
+  
+ function generate_string($input, $strength = 16) {
+     $input_length = strlen($input);
+     $random_string = '';
+     for($i = 0; $i < $strength; $i++) {
+         $random_character = $input[mt_rand(0, $input_length - 1)];
+         $random_string .= $random_character;
+     }
+  
+     return $random_string;
+ }
+  
+ // Output: iNCHNGzByPjhApvn7XBD
+ $gen_id = generate_string($permitted_chars, 10);
+ 
+  
+ ?> 
 
 <!-- add modal -->
 <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -14,7 +34,8 @@
 <div class="row g-3">
             <div class="col-md-4 mb-3">
               <label for="validationCustom0">Employee I.D</label>
-              <input type="text" class="form-control" id="validationCustom0" name="employeeid" required >
+              <input type="text" class="form-control" id="validationCustom0" disabled value="<?php echo $gen_id; ?>" required >
+              <input type="hidden" class="form-control" id="validationCustom0" name="employeeid" value="<?php echo $gen_id; ?>" required >
             </div>
           
         </div>
@@ -41,21 +62,26 @@
               </div>
             <div class="form-row row g-3">
                 <div class="col-md-3 mb-3">
-                    <label for="validationCustom07">Designation</label>
-                    <input type="text" class="form-control" id="validationCustom07" name="designation" required>
+                <label for="des">Designation</label>
+                    <select class="form-control" name="designation" id="des">
+                    <option>Choose...</option>
+                    @foreach ($designations as $designation)
+                        <option value="{{$designation->id}}">{{$designation->designation}}</option>
+                    @endforeach
+                    </select>
                 </div>
 
               <div class="col-md-3 mb-3">
                 <label for="validationCustom05">Date of Birth</label>
                 <input type="date" class="form-control" id="validationCustom05" name="dob" required>
               </div>
-              <div class="col-md-3 mb-3">
+              <!-- <div class="col-md-3 mb-3">
                     <label for="validationCustom06">Gender</label>
                     <select class="form-control" name="gender" id="validationCustom06">
                         <option>Male</option>
                         <option>Female</option>
                     </select>
-              </div>
+              </div> -->
              
             </div>
             
@@ -114,20 +140,25 @@
             <div class="form-row row g-3">
                 <div class="col-md-3 mb-3">
                     <label for="designation">Designation</label>
-                    <input type="text" class="form-control" id="designation" name="designation" required>
+                    <select class="form-control" name="designation" id="designation">
+                    <option>Choose...</option>
+                    @foreach ($designations as $designation)
+                        <option value="{{$designation->id}}">{{$designation->designation}}</option>
+                    @endforeach
+                    </select>
                 </div>
 
               <div class="col-md-3 mb-3">
                 <label for="dob">Date of Birth</label>
                 <input type="date" class="form-control" id="dob" name="dob" required>
               </div>
-              <div class="col-md-3 mb-3">
+              <!-- <div class="col-md-3 mb-3">
                     <label for="gender">Gender</label>
                     <select class="form-control" name="gender" id="gender">
                         <option>Male</option>
                         <option>Female</option>
                     </select>
-              </div>
+              </div> -->
              
             </div>
       </div>

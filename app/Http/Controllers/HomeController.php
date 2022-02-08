@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Designation;
+use App\Models\Employee;
 
 class HomeController extends Controller
 {
@@ -23,6 +25,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('admin/dashboard.index');
+        $designations = Designation::count();
+        $employees = Employee::count();
+
+        return view('admin/dashboard.index',compact('designations','employees'));
     }
 }

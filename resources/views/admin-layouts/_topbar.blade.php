@@ -1,4 +1,4 @@
-<nav class="sb-topnav navbar navbar-expand navbar-light" style="background-color: #E1C16E">
+<nav class="sb-topnav navbar navbar-expand navbar-light shadow" style="background-color: #E1C16E">
         <!-- Navbar Brand-->
        
   

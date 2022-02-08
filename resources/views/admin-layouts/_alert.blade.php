@@ -10,4 +10,8 @@
     <div id="message" class="bg-info d-flex align-items-center">
         <span style="font-size: 1rem"><i class="fas fa-pen mr-2 text-white"></i>{{ session('update') }}</span>
     </div>
+    @elseif(session('error'))
+    <div id="message" class="bg-warning d-flex align-items-center">
+        <span style="font-size: 1rem"><i class="fas fa-pen mr-2 text-white"></i>{{ session('error') }}</span>
+    </div>
 @endif

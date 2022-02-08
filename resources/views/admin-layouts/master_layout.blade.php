@@ -13,10 +13,16 @@
         <link href="{{asset ('css/sb-admin/styles.css')}}" rel="stylesheet" />
         <script src="https://code.jquery.com/jquery-3.5.1.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+        <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
         <link rel="stylesheet" href="{{ asset('css/alert.css') }}">
         <style>
             body {
                 background-color: #fff; color: #636b6f; font-family: 'Raleway';
+            }
+            main {
+                 font-family: 'nunito';
             }
         </style>
     </head>
@@ -49,6 +55,9 @@
          
         <script>
          $(document).ready(function(){
+
+           //employee
+
            $('.delete-employee').each(function() {
              $(this).click(function(event){
                $('#deleteEmployee').attr("action", "/employee/delete/"+$(this).data('employeeid')+"")
@@ -67,7 +76,26 @@
                $('#dob').val($(this).data('dob'));
                $('#age').val($(this).data('age'));
              })
-           })
+           });
+
+
+          //designation
+
+          $('.delete-designation').each(function() {
+             $(this).click(function(event){
+               $('#deleteDesignation').attr("action", "/designation/delete/"+$(this).data('designationid')+"")
+             })
+           });
+          $('.edit-designation').each(function() {
+             $(this).click(function(event){
+               $('#designationUpdate').attr("action", "/designation/update/"+$(this).data('designationid')+"");
+               $('#designation').val($(this).data('designation'));
+             })
+           });
+
+
+
+
          });
         </script>
     </body>

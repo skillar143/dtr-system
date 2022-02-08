@@ -18,7 +18,7 @@
                 line-height:1.5
             }
             body {
-                background-color: white; color: #636b6f; font-family: 'Raleway';overflow: hidden;
+                background-color: #fff; color: #636b6f; font-family: 'Raleway';
             }
             .vertical {
             border-left: 6px solid maroon;
@@ -64,75 +64,49 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous" defer></script>
 
     </head>
-    <body onload="initClock()">
-        <div class="relative d-flex items-top justify-content-center">
+    <body onload="initClock()" class="bg-dark">
+        <div class="relative d-flex items-top justify-content-center min-h-screen bg-gray-100 dark:bg-gray-900">
+            
             <div class="w-100 position-fixed mt-auto mr-0 px-4 py-2" style="background-color: maroon;">
                 <a href="{{ route('login') }}" class="text-sm text-light float-right"><i class="fas fa-user fa-fw mr-1 "></i>Log in</a>
             </div>
-        </div>
-        <div class="min-h-screen">
-        <div class="text-center" style=" margin-top: 50px">
-                    <div class="display-3 text-dark d-none d-sm-block ">
-                        PUP CALAUAN CAMPUS
-                    </div>
-        </div>
-                    
             <div class="d-flex justify-content-center align-items-center">
                 <div class="text-center">
-                    <div class="d-flex justify-content-center align-items-center" style="width:1500px; margin: auto">
-
-                    <div class="w-50 d-none d-sm-block">
-                    <div class="w-100 m-auto">
-
-                    <embed type="text/html" src="{{asset('Clock/index.html')}}" height="550px" width="100%">
-                            <!-- <div class="h2">
+                    <img class="img-profile rounded-circle d-none d-sm-inline-block" style="height:150px" src="{{asset('img/logo.png')}}">
+                    <div class="display-2 d-none d-sm-block ">
+                        PUP CALAUAN CAMPUS
+                    </div>
+                    <div class="d-flex justify-content-center align-items-center ">
+                        <div class="m-1 p-5 w-50 d-none d-sm-block">
+                            <div class="h2">
                                 <span id="month">month</span>
                                 <span id="daynum">00</span>
                                 <span>,</span>
                                 <span id="year">0000</span>
                                 <span id="day">(day)</span>  
                             </div>
-                            <div class="display-2">
+                            <div class="display-4">
                                 <span id="hour">00</span>
                                 <span>:</span>
                                 <span id="minute">00</span>
                                 <span>:</span>
                                 <span id="second">00</span>
                                 <span id="period">pm</span>
-                            </div> -->
-                        </div>
-                    </div>
-                        
-<!--  -->
-                        <!-- <div class="vertical m-1 position-static d-none d-sm-block"></div> -->
-
-                        <div class="w-50">
-                        <div class="card position-static w-50 m-auto  shadow-sm border-0" >
-                            <div class="card-header bg-transparent">
-                            <div class="h1">
-                                    <span id="hour">00</span>
-                                    <span>:</span>
-                                    <span id="minute">00</span>
-                                    <span>:</span>
-                                    <span id="second">00</span>
-                                    <span id="period">pm</span>
-                                </div>
-                                <div class="h3">
-                                    <span id="month">month</span>
-                                    <span id="daynum">00</span>
-                                    <span>,</span>
-                                    <span id="year">0000</span>
-                                    <span id="day">(day)</span>  
-                                </div>
-
-                                    
                             </div>
-                            <div class="card-body border-0 bg-transparent">
+                        </div>
+<!--  -->
+                        <div class="vertical m-1 position-static d-none d-sm-block"></div>
+<!--  --> 
+                        <div class="card position-static w-50 bg-dark d-none d-sm-block" >
+                            <div class="card-header bg-dark ">
+                                <h5>Time in.</h5>  
+                            </div>
+                            <div class="card-body">
                                 <div class="">
                                     <form>
                                         <div class="form-group ">
                                             <label for="exampleInputId1" class="float-left">ID number</label>
-                                            <input type="text" class="form-control" id="exampleInputId1" placeholder="Employee ID">
+                                            <input type="text" class="form-control bg-dark text-light" id="exampleInputId1" placeholder="Employee ID">
                                             <small  class="form-text text-muted">We need your I.D. to process your time in.</small>
                                         </div>
                                         <button type="submit" class="btn btn-outline-primary">Time In</button>
@@ -141,12 +115,26 @@
                                 <!-- <a href="#">Do manual Login</a> -->
                             </div>
                         </div>
-                        </div>
-<!--  --> 
-                        
                         <!-- small -->
                         
-                        
+                        <div class="card position-static w-100 bg-dark d-block d-sm-none">
+                            <div class="card-header bg-dark">
+                                <h5>Time in.</h5>  
+                            </div>
+                            <div class="card-body">
+                                <div class="container-fluid justify-content-center align-items-center">
+                                    <form>
+                                        <div class="form-group ">
+                                            <label for="exampleInputId1">ID number</label>
+                                            <input type="text" class="form-control bg-dark text-light" id="exampleInputId1" placeholder="Employee ID">
+                                            <small  class="form-text text-muted">We need your I.D. to process your time in.</small>
+                                        </div>
+                                        <button type="submit" class="btn btn-outline-primary">Time In</button>
+                                    </form>
+                                </div>
+                                <!-- <a href="#">Do manual Login</a> -->
+                            </div>
+                        </div>
      
 
 
@@ -156,7 +144,6 @@
             </div>
         </div>
 
-        
    <script type="text/javascript">
   function updateClock() {
     var now = new Date();

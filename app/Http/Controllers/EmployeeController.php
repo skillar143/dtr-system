@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Employee;
+use App\Models\Designation;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 
@@ -17,8 +18,9 @@ class EmployeeController extends Controller
     {
         //
         $employees = Employee::all();
+        $designations = Designation::all();
         
-        return view('admin/employee.index',compact('employees'));
+        return view('admin/employee.index',compact('employees','designations'));
     }
 
     /**
@@ -40,8 +42,16 @@ class EmployeeController extends Controller
     public function store(Request $request)
     {
         //dd($request->all());
+        $employees = Employee::select('employee_id')->get();
         $age = \Carbon\Carbon::parse($request->dob)->diff(\Carbon\Carbon::now());
 
+       // dd($employees);
+       
+       if($employees->contains('employee_id',$request->employeeid)){
+           
+         return redirect()->back()->with('error','Employee I.D is Already Taken!');
+       }
+         
         Employee::create([
             'employee_id' =>$request->employeeid,
             'firstname' =>$request->firstname,
