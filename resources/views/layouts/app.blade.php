@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     
 </head>
-<body style="background-color: 	#1a202c;">
+<body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-dark  shadow-sm" style="background-color: maroon;">
             <div class="container">
@@ -53,6 +53,8 @@
         <main class="py-4">
             @yield('content')
         </main>
+       
     </div>
+
 </body>
 </html>

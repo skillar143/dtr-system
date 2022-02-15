@@ -12,12 +12,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+Route::get('/', [App\Http\Controllers\TimeRecordController::class, 'index'])->name('home');
+Route::post('/timein', [App\Http\Controllers\TimeRecordController::class, 'store'])->name('timein.store');
 
 Auth::routes();
+
+
 
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard.index');
 
@@ -35,3 +35,5 @@ Route::prefix('/designation')->group(function(){
     Route::put('/update/{id}', [App\Http\Controllers\DesignationController::class, 'update'])->name('designation.update');
     Route::delete('/delete/{id}', [App\Http\Controllers\DesignationController::class, 'destroy'])->name('designation.destroy');
     });
+
+
