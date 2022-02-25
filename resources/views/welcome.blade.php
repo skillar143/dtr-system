@@ -91,7 +91,21 @@
                 </div>
             </div>
         </nav>
-       
+        <div class="mr-2 mt-2">
+        @if (session('success'))
+            <div id="message" class="bg-success d-flex align-items-center text-white float-right" style="height: 50px; width: 200px; padding-2px">
+                <span style="font-size: 1rem; margin: 10px"><i class="fas fa-check-circle mr-2 text-white"></i>{{ session('success') }}</span>
+            </div>
+        @elseif(session('info'))
+            <div id="message" class="bg-info d-flex align-items-center text-white float-right" style="height: 50px; width: 200px; padding-2px">
+                <span style="font-size: 1rem; margin: 10px"><i class="fas fa-pen mr-2 text-white"></i>{{ session('info') }}</span>
+            </div>
+            @elseif(session('error'))
+            <div id="message" class="bg-danger d-flex align-items-center rounded text-white float-right" style="height: 50px; width: 200px; padding-2px">
+                <span style="font-size: 1rem; margin: 10px"><i class="fas fa-pen mr-2 text-white"></i>{{ session('error') }}</span>
+            </div>
+        @endif
+        </div>
         <main class="py-4">
         <div class="container">
             <div class="text-center" style=" padding-top: 50px">
@@ -178,21 +192,7 @@
             
         </div>
         </main>
-        <div class="container">
-        @if (session('success'))
-            <div id="message" class="bg-success d-flex align-items-center text-white float-right" style="height: 50px; width: 200px; padding-2px">
-                <span style="font-size: 1rem; margin: 10px"><i class="fas fa-check-circle mr-2 text-white"></i>{{ session('success') }}</span>
-            </div>
-        @elseif(session('info'))
-            <div id="message" class="bg-info d-flex align-items-center text-white float-right" style="height: 50px; width: 200px; padding-2px">
-                <span style="font-size: 1rem; margin: 10px"><i class="fas fa-pen mr-2 text-white"></i>{{ session('info') }}</span>
-            </div>
-            @elseif(session('error'))
-            <div id="message" class="bg-danger d-flex align-items-center rounded text-white float-right" style="height: 50px; width: 200px; padding-2px">
-                <span style="font-size: 1rem; margin: 10px"><i class="fas fa-pen mr-2 text-white"></i>{{ session('error') }}</span>
-            </div>
-        @endif
-        </div>
+       
         
         
         <script src="{{ asset('js/app.js') }}" defer></script>

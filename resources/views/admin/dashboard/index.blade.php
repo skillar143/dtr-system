@@ -40,8 +40,8 @@
         </div>
     </div>
 
-    <div class="col-xl-3 col-md-6 mb-4">
-    <div class="card border border-5 border-top-0 border-end-0 border-bottom-0 border-info shadow-lg m-3">
+    <!-- <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border border-5 border-top-0 border-end-0 border-bottom-0 border-info shadow-lg m-3">
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
@@ -57,7 +57,7 @@
         </div>
     </div>
     <div class="col-xl-3 col-md-6 mb-4">
-    <div class="card border border-5 border-top-0 border-end-0 border-bottom-0 border-danger shadow-lg m-3">
+        <div class="card border border-5 border-top-0 border-end-0 border-bottom-0 border-danger shadow-lg m-3">
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
@@ -71,7 +71,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     
 

@@ -36,4 +36,8 @@ Route::prefix('/designation')->group(function(){
     Route::delete('/delete/{id}', [App\Http\Controllers\DesignationController::class, 'destroy'])->name('designation.destroy');
     });
 
+    Route::prefix('/attendance')->group(function(){
+        Route::get('/', [App\Http\Controllers\TimeRecordController::class, 'attendance'])->name('attendance.index');
+        });
+
 

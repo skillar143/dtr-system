@@ -20,6 +20,13 @@ class TimeRecordController extends Controller
         return view('welcome');
     }
 
+    public function attendance()
+    {
+        //
+        $attendance = TimeRecord::all()->sortByDesc('doa');
+        return view('admin/attendance.index',compact('attendance'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -64,7 +71,7 @@ class TimeRecordController extends Controller
                if($attendance->contains('employee_id',$request->employeeid)){
 
 
-                if($record->pm_status == "TimeIn"){
+                if($record->am_status == "TimeIn"){
                     TimeRecord::where('employee_id','=',$request->employeeid)->update([
                         'am_status' =>"TimeOut",
                         'timeOut_am' =>$hour
@@ -85,7 +92,7 @@ class TimeRecordController extends Controller
                         'employee_id' =>$request->employeeid,
                         'timeIn_am' =>"N/A",
                         'timeOut_am' =>"N/A",
-                        'am_status' =>"absent",
+                        'am_status' =>"Absent",
                         'pm_status' =>"TimeIn",
                         'timeIn_pm' =>$hour,
                         'doa' =>$date
@@ -101,7 +108,7 @@ class TimeRecordController extends Controller
                         ]);
                         return redirect()->back()->with('success','Time Out Afternoon');
                     }   
-                    if($record->am_status == "absent"){
+                    if($record->am_status == "Absent"){
                         TimeRecord::where([['employee_id','=',$request->employeeid],['pm_status','=',"TimeIn"]])->update([
                             'pm_status' =>"TimeIn",
                             'timeIn_pm' =>$hour

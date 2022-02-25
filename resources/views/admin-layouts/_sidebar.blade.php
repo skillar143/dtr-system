@@ -8,7 +8,7 @@
             </a>
             <div class="sb-sidenav-menu-heading">Menu</div>
 
-            <a class="nav-link" href="charts.html">
+            <a class="nav-link" href="{{route('attendance.index')}}">
                 <div class="sb-nav-link-icon"><i class="fas fa-list-ul"></i></div>
                Attendance
             </a>
