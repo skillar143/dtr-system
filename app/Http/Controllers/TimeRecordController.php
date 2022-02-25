@@ -23,7 +23,8 @@ class TimeRecordController extends Controller
     public function attendance()
     {
         //
-        $attendance = TimeRecord::all()->sortByDesc('doa');
+        $date = \Carbon\Carbon::now("Asia/Manila")->format("Y-m-d");
+        $attendance = TimeRecord::all()->where('doa','=',$date)->sortByDesc('doa');
         return view('admin/attendance.index',compact('attendance'));
     }
 
