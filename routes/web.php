@@ -46,4 +46,9 @@ Route::prefix('/report')->group(function(){
     Route::post('/filtered', [App\Http\Controllers\ReportController::class, 'filter'])->name('report.filter');
     });    
 
+Route::prefix('/setting')->group(function(){
+    Route::put('/{id}', [App\Http\Controllers\UserController::class, 'update'])->name('user.update');
+    //Route::post('/filtered', [App\Http\Controllers\ReportController::class, 'filter'])->name('report.filter');
+    });  
+
 

@@ -22,16 +22,15 @@
             </a>
             
            
-            <div class="sb-sidenav-menu-heading">Addons</div>
+            <div class="sb-sidenav-menu-heading">Reports</div>
             <a class="nav-link" href="{{route('report.index')}}">
                 <div class="sb-nav-link-icon"><i class="fas fa-clipboard-list"></i></div>
-                Reports
+                Report
             </a>
         </div>
     </div>
     <div class="sb-sidenav-footer" style="background-color: maroon">
-        <div class="small">Logged in as:</div>
-       Admin
+        <div class="small">Admin:  {{Auth::user()->name}}  </div>
     </div>
 </nav>
 

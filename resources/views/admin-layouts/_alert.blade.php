@@ -14,4 +14,12 @@
     <div id="message" class="bg-warning d-flex align-items-center">
         <span style="font-size: 1rem"><i class="fas fa-pen mr-2 text-white"></i>{{ session('error') }}</span>
     </div>
+@elseif(session('wrong'))
+    <div id="message" class="bg-danger d-flex align-items-center">
+        <span style="font-size: 1rem"><i class="far fa-times-circle text-white"></i>{{ session('wrong') }}</span>
+    </div>
+    @elseif(session('notmatch'))
+    <div id="message" class="bg-danger d-flex align-items-center">
+        <span style="font-size: 1rem"><i class="fas fa-not-equal text-white"></i>{{ session('notmatch') }}</span>
+    </div>
 @endif

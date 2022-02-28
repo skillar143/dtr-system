@@ -3,6 +3,7 @@
 
 @section('content')
 <h1 class="mt-3">Report</h1>
+<!-- <a href="/filtered" class="btn btn-sm btn-outline-success mx-3">Export to Excel</a> -->
   <form class="w-25 col ms-auto me-0 me-md-3 my-2 my-md-0" action="{{route('report.filter')}}" method="POST">
     @csrf
   <div class="input-group ">
@@ -15,7 +16,7 @@
     <option value="05">May</option>
     <option value="06">June</option>
     <option value="07">July</option>
-    <option value="08">Augost</option>
+    <option value="08">August</option>
     <option value="09">September</option>
     <option value="10">October</option>
     <option value="11">November</option>
@@ -26,7 +27,7 @@
 
   </form>
 <div class="table-responsive mt-2 mx-3">
-<table class="table table-striped">
+<table class="table table-striped" id="example">
   <thead>
     <tr>
       <th scope="col">Employee I.D</th>
@@ -39,12 +40,6 @@
       <th scope="col" >Status</th>
       <th scope="col" >Day</th>
       <th scope="col">Date</th>
-      <tr class="bg-transparent border-none">
-        <th></th>
-        <th></th>
-        <th colspan="3" class="text-center">Morning Session</th>
-        <th colspan="3" class="text-center">Afternoon Session</th>
-    </tr>
     </tr>
   </thead>
   <tbody>
@@ -65,4 +60,6 @@
   </tbody>
 </table>
 </div>
+
+
 @endsection
