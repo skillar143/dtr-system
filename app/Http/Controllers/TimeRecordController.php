@@ -109,15 +109,20 @@ class TimeRecordController extends Controller
                         ]);
                         return redirect()->back()->with('success','Time Out Afternoon');
                     }   
+                    if($record->pm_status == "TimeOut"){
+                        return redirect()->back()->with('info','Already Timeout');  
+                    }  
                     if($record->am_status == "Absent"){
                         TimeRecord::where([['employee_id','=',$request->employeeid],['pm_status','=',"TimeIn"]])->update([
                             'pm_status' =>"TimeIn",
                             'timeIn_pm' =>$hour
                         ]);
                         return redirect()->back()->with('success','Time In Afternoon'); 
-                    }     
+                    }  
+                    
+                    
 
-                    return redirect()->back()->with('info','Already Timeout'); 
+                   
                 }  
  
             }
